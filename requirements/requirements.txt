@@ -1,0 +1,2 @@
+abstract-hardware-interface @ git+https://github.com/neongeckocom/abstract-hardware-interface@FEAT_InitialImplementation
+sj201-interface
