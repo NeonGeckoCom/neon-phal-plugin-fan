@@ -59,7 +59,8 @@ class FanControlThread(Thread):
     def __init__(self, fan_obj: AbstractFan):
         self.fan_obj = fan_obj
         self.exit_flag = Event()
-        self._max_fanless_temp = 60.0
+        self._max_fanless_temp = 60.0  # Highest fan-less temp allowed
+        self._max_fan_temp = 80.0      # Thermal throttle temp max fan
         Thread.__init__(self)
 
     def run(self):
@@ -72,12 +73,12 @@ class FanControlThread(Thread):
                 # Below specified fanless temperature
                 fan_speed = 0
                 LOG.debug(f"Temp below {self._max_fanless_temp}")
-            elif current_temp > 80.0:
+            elif current_temp > self._max_fan_temp:
                 LOG.warning(f"Thermal Throttling, temp={current_temp}C")
                 fan_speed = 100
             else:
                 # Specify linear fan curve inside normal operating temp range
-                speed_const = 100/(80.0-self._max_fanless_temp)
+                speed_const = 100/(self._max_fan_temp - self._max_fanless_temp)
                 fan_speed = speed_const * (current_temp -
                                            self._max_fanless_temp)
                 LOG.debug(f"temp={current_temp}")
