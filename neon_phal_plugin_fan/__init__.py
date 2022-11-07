@@ -53,6 +53,8 @@ class FanControls(PHALPlugin):
 
     def shutdown(self):
         self.fan_thread.exit_flag.set()
+        self.fan_thread.join(5)
+        self.fan.shutdown()
 
 
 class FanControlThread(Thread):
@@ -85,3 +87,4 @@ class FanControlThread(Thread):
 
             LOG.debug(f"Setting fan speed to: {fan_speed}")
             self.fan_obj.set_fan_speed(fan_speed)
+        LOG.debug("Fan thread received exit signal")
