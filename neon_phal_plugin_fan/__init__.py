@@ -57,6 +57,8 @@ class FanControls(PHALPlugin):
     def shutdown(self):
         self.fan_thread.exit_flag.set()
         self.fan_thread.join(5)
+        # Set fan speed to ensure adequate cooling while plugin is unloaded
+        self.fan.set_fan_speed(50)
         self.fan.shutdown()
 
 
