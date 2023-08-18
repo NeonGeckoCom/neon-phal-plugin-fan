@@ -50,11 +50,20 @@ class FanControls(PHALPlugin):
         self.fan = get_fan(detect_sj201_revision())
         self.fan_thread = FanControlThread(self.fan)
         self.fan_thread.start()
+        if self.config.get("min_fan_temp"):
+            self.fan_thread.set_min_fan_temp(
+                float(self.config.get("min_fan_temp")))
 
     def shutdown(self):
         self.fan_thread.exit_flag.set()
         self.fan_thread.join(5)
         self.fan.shutdown()
+        try:
+            # Turn on Mark2 fan to prevent thermal throttling
+            import RPi.GPIO as GPIO
+            GPIO.output(self.fan.fan_pin, 0)
+        except Exception as e:
+            LOG.debug(e)
 
 
 class FanControlThread(Thread):
@@ -64,6 +73,23 @@ class FanControlThread(Thread):
         self._max_fanless_temp = 60.0  # Highest fan-less temp allowed
         self._max_fan_temp = 80.0      # Thermal throttle temp max fan
         Thread.__init__(self)
+
+    def set_min_fan_temp(self, new_temp: float):
+        """
+        Set the temperature at which the fan will turn on.
+        @param new_temp: Float temperature in degrees Celsius at which the fan
+            will start running. Recommended values are 30.0-60.0
+        """
+        if new_temp > 80.0:
+            LOG.error("Fan will run at maximum speed at 80C; "
+                      "min temp must be lower. Setting unchanged.")
+            return
+        if new_temp < 0.0:
+            LOG.error("Requested temperature is below operating range; "
+                      "min temp must be more than 0C. Setting unchanged.")
+            return
+        LOG.info(f"Set fan to turn on at {new_temp}C")
+        self._max_fanless_temp = new_temp
 
     def run(self):
         LOG.debug("temperature monitor thread started")
