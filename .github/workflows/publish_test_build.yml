@@ -13,4 +13,5 @@ jobs:
     uses: neongeckocom/.github/.github/workflows/publish_alpha_release.yml@master
     secrets: inherit
     with:
+      update_changelog: true
       publish_prerelease: true
