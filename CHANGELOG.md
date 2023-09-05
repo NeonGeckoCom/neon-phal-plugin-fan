@@ -1,11 +1,12 @@
 # Changelog
 
-## [Unreleased](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/HEAD)
+## [0.0.4a3](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.0.4a3) (2023-09-05)
 
-[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.0.3...HEAD)
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.0.3...0.0.4a3)
 
 **Merged pull requests:**
 
+- Fix setup.py automation bugs [\#12](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/12) ([NeonDaniel](https://github.com/NeonDaniel))
 - Fix error in automation [\#11](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/11) ([NeonDaniel](https://github.com/NeonDaniel))
 - Update GH Automation to current standards [\#10](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/10) ([NeonDaniel](https://github.com/NeonDaniel))
 - Allow configuring minimum fan temperature [\#8](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/8) ([NeonDaniel](https://github.com/NeonDaniel))
