@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a2](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a2) (2024-09-19)
+
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a1...0.1.1a2)
+
+**Merged pull requests:**
+
+- Update dependencies to allow OVOS 0.x dependency resolution [\#16](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/16) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.1.1a1](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a1) (2024-04-26)
 
 [Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.0...0.1.1a1)
