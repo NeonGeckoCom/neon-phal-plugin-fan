@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a3](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a3) (2025-03-14)
+
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a2...0.1.1a3)
+
+**Merged pull requests:**
+
+- Update license notices to 2025 [\#17](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/17) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.1.1a2](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a2) (2024-09-19)
 
 [Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a1...0.1.1a2)
