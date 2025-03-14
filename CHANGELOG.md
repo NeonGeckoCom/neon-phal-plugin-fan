@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a5](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a5) (2025-03-14)
+
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a4...0.1.1a5)
+
+**Merged pull requests:**
+
+- Update sj201-interface dependency [\#19](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/19) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.1.1a4](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a4) (2025-03-14)
 
 [Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a3...0.1.1a4)
