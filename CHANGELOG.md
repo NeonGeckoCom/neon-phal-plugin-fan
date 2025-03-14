@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.1a4](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a4) (2025-03-14)
+
+[Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a3...0.1.1a4)
+
+**Merged pull requests:**
+
+- Remove unused `version_bump.py` script [\#18](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/pull/18) ([NeonDaniel](https://github.com/NeonDaniel))
+
 ## [0.1.1a3](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/tree/0.1.1a3) (2025-03-14)
 
 [Full Changelog](https://github.com/NeonGeckoCom/neon-phal-plugin-fan/compare/0.1.1a2...0.1.1a3)
